@@ -91,7 +91,6 @@ def room2():
     print('At one glance, you know this is the metal this facility is researching - Ellumium')
 
     while not all((insp1, insp2, insp3)):
-        break
         inspect = None
         while not (inspect == '1' or inspect == '2' or inspect == '3'):
             print('''\nThere are 3 items that catch your eye:
