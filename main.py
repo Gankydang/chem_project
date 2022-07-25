@@ -16,6 +16,9 @@ def organise_text(open_or_close):
         print('|' + ' ' * 58 + '|')
         print('-' * 60)
 
+def enter():
+    input('---Press enter to continue---')
+
 def get_corr_ans(insults, compliments, catpic,  question, *corr_ans, hint=False):
     given_ans = ''
     while not is_correct(given_ans, corr_ans):
@@ -89,7 +92,7 @@ def room2():
     insp1 = insp2 = insp3 = False
     print('\nYou pick up the pieces distinctly pink coloured metal.')
     print('At one glance, you know this is the metal this facility is researching - Ellumium')
-
+    enter()
     while not all((insp1, insp2, insp3)):
         inspect = None
         while not (inspect == '1' or inspect == '2' or inspect == '3'):
@@ -107,7 +110,7 @@ def room2():
             A solution of Ellumium ions is pink.
             Ellumium metal has a high melting point.''')
                 organise_text('close')
-                sleep(5)
+                enter()
                 insp1 = True
             if inspect == '2':
                 organise_text('open')
@@ -125,6 +128,7 @@ def room2():
                 sleep(3)
                 print('\nYou breathe a sigh of relief,\nand curse your laziness to tie your shoelaces.')
                 organise_text('close')
+                enter()
                 insp2 = True
             if inspect == '3':
                 organise_text('open')
@@ -137,7 +141,7 @@ def room2():
                 print('\nYou turn on the bunsen burner and watch\nas the pink compound becomes a pink metal')
                 print('and the blue cobalt (II) chloride paper turns pink.')
                 organise_text('close')
-                sleep(5)
+                enter()
                 insp3 = True
 
     print('\nSomething else catches your eye.')
@@ -145,21 +149,22 @@ def room2():
     sleep(4)
     print('\nThe number pad accepts a 2-digit number\nand you realise that the password to the door must be related to the questions.')
     print('You try to answer the questions first\nusing knowledge gained from inspecting the items.')
-    sleep(4)
+    enter()
 
     insult = '\nEven though you thought of an answer,\nyour chemistry instincts kick in and tell you that your answer is wrong.'
     compliment = '\nYour chemistry tingle tells you that your answer is right'
     dying = '''\nAn alarm starts wailing and you know guards are on the way
 however, as come in from the door behind you,
 your martial arts training kicks in and you win a 1 v 10 fight.
-\nYou continue as if nothing happened at all.'''
+\nYou casually continue as if nothing happened at all.'''
     open_door = '\nThe door slides upward with a hiss. You advance to the next room!'
+    hint2 = 'Count the number of letters.'
 
     get_corr_ans(insult, compliment, '', '\nQ1. Ellumium is a __________ metal.\n> ', 'transition')
     get_corr_ans(insult, compliment, '', '\nQ2. What process is used to separate group I metals from their salts?\n> ', 'electrolysis')
     get_corr_ans(insult, compliment, '', '\nQ3. Water is known to have a high surface tension. This is because of ________ _______.\n> ', 'hydrogen bonds', 'hydrogen bonding')
     get_corr_ans(insult, compliment, '', '\nQ4. Which metal is Ellumium directly below in the reactivity series?\n> ', 'sodium')
-    get_corr_ans(dying, open_door, '', '\nYou type in the 2-digit password on the number pad.\nThe psw is: ', '41', '43')
+    get_corr_ans(dying, open_door, '', '\nYou type in the 2-digit password on the number pad.\nThe psw is: ', '41', '43', hint=hint2)
 
 def room3():
     Q3a_qn = 'Besides its uses in question 2, transition metals are usually used as catalysts\nGiven that Ellumium has 3 oxidation states, is iron a better catalyst than ellumium?'
