@@ -81,9 +81,9 @@ def intro():
     a newspaper to transmit information, and in this case, the name of the town that the facility is located in.
 ''')
     print('''()_________)
- \ ~~~~~~~~ \
-  \ ~~~~~~   \
-    \__________\
+ \\ ~~~~~~~~ \\
+  \\ ~~~~~~   \\
+    \\__________\\
       ()__________))''')
     enter()
     print(''''You get a copy of the newspaper in question and inspect it.
@@ -92,24 +92,24 @@ There is a very sus chemistry quiz and you decide to take a look.''')
 def room1():
     list_of_insults = ['WRONG:(', 'TOO BAD', 'WHOOPS!', 'TRY AGAIN', 'GO STUDY MORE', 'GITGUD', 'NATURAL SELECTION DOES\'NT FAVOUR YOU']
     list_of_compliments = ['smarty pants', 'mugger', 'good job', 'nerd', 'k, fine you passed ig', 'we are proud of you']
-    cat1 = '''\n|\---/|
+    cat1 = '''\n|\\---/|
 | o_o |
- \_^_/'''
+ \\_^_/'''
     cat2 = '''\n|\      _,,,---,,_
 ZZZzz /,`.-'`'    -.  ;-;;,_
-|,4-  ) )-,_. ,\ (  `'-'
-'---''(_/--'  `-'\_)'''
+|,4-  ) )-,_. ,\\ (  `'-'
+'---''(_/--'  `-'\\_)'''
     cat3 = ''' \n_._     _,-'""`-._
-(,-.`._,'(       |\`-/|
+(,-.`._,'(       |\\`-/|
     `-.-' \ )-`( , o o)
-          `-    \`_`"'-'''
+          `-    \\`_`"'-'''
     cat4 = '''\n                 __        .-.
-             .-"` .`'.    /\\|
-     _(\-/)_" ,  .   ,\  /\\\/
-    {(#b^d#)} .   ./,  |/\\\/
-    `-.(Y).-`  ,  |  , |\.-`
-         /~/,_/~~~\,__.-`
-        ////~    // ~\\
+             .-"` .`'.    /\\\\|
+     _(\\-/)_" ,  .   ,\\  /\\\\\\/
+    {(#b^d#)} .   ./,  |/\\\\\\/
+    `-.(Y).-`  ,  |  , |\\.-`
+         /~/,_/~~~\\,__.-`
+        ////~    // ~\\\\
       ==`==`   ==`   ==`'''
 
 
