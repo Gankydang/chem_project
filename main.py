@@ -68,7 +68,7 @@ def intro():
      /  )  /  )
     /__/  /__/
     ''')
-    print('You\n | \n ^ ')
+    print(' ^ \n | \nYou')
     print('''Background:
     A new metal has been discovered in one of the deepest parts of the ocean.
     Scientists have named this metal Ellumium, with the chemical symbol El, and much of its
