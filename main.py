@@ -334,9 +334,16 @@ to be broken down into its metal, given that Ellumium is made to have a charge o
     enter()
     print('However, when you open the door, you see a guard staring right at your face.')
     print('The last thing you remember something slamming into the side of your head before you black out.')
-
+    enter()
 def room5():
     print('You wake up in a room that parallels a prison cell.')
+    print('''The door seems to be locked by a number keypad. You wait a couple of hours 
+till it is night time and until then you think of how you’re gonna escape but you feel hopeless. 
+Suddenly a piece of paper gets slipped under your door. You quickly grab it and it has this written. Odd-43. Even-36. Count!. And the following questions.
+It is also written on the note, "I am undercover in this facility and I am here to help you escape. Meet me at the exit, 
+you will have to make your way there yourself.''')
+    enter()
+        
     Q1 = 'When elumium gets oxidised, the oxide can then react with both acids and bases. So, Elumiumi Oxide is _____'
     Q2 = 'Elumium can readily react with oxygen in the air to for a insoluble oxide layer.\nIn order to prevent this what is a method that can be used other than surface protection?'
     Q3 = 'Elumium and Graphite have a similar property of conducting electricity.\nWhat is the common thing that brings this common property?'
@@ -346,9 +353,27 @@ def room5():
     get_corr_ans('wrong', 'right', '', '\nQ2. ', Q2, '\n> ', 'galvanising', 'sacrificial protection')
     get_corr_ans('wrong', 'right', '', '\nQ3. ', Q3, '\n> ', 'delocalised electrons')
     get_corr_ans('wrong', 'right', '', '\nQ1. ', Q4, '\n> ', 'ellumium hydroxide')
-
-    print('Odd no. of letters - 43\nEven no. of letters - 36')
     get_corr_ans('wrong', 'right', '', 'You enter the pin into the keypad: ', '151', hint='Check whether each answer is even or odd\nThen add the corresponding number')
+    
+    print('''The door slides open with a whir and you hurry around the facility, trying to find the exit
+while not getting spotted by guards. You see the exit and run at full throttle!''')
+    enter()
+    
+def end():
+    print('''You burst out the front door and scramble out. It is night time, 
+and the guards seem half asleep so you slowly sneak out of the facility. 
+Just at the exit, you see a guard standing tall and staring at you. 
+
+He says this, “Took you long enough. I slipped you that paper. WHO bought me over to their side when 
+they had an inkling you were in danger."
+
+You reply, "We need to destroy this facility right now. This place is obviously evil
+and we cannot allow it to go on. How are we gonna destroy it?"
+
+He beamed, "I know just the right thing. Now, there is a small room in the far north of the 
+facility where a large clump of ellumium is. Right above is a large pipe of water. 
+You know what would happen if you were to break the pipe. It is very risky, but it's for the greater good. 
+Or do you wish to save yourself and run away? The choice is yours to make. I trust you will make the right decision.''')
 
 
 room2()
