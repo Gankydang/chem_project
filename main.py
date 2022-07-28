@@ -8,6 +8,20 @@ def is_correct(given_ans, correct_ans):
         return True
     return False
 
+def is_correct_keywords(given_ans, *correct_ans, either_or=False):
+    if given_ans == '':
+        return False
+    new_correct_ans = list(correct_ans)
+    for i in correct_ans:
+        if i in given_ans:
+            new_correct_ans.remove(i)
+    if len(new_correct_ans) == 0:
+        for thing in either_or:
+            if thing in given_ans:
+                return True
+    else:
+        return False
+
 def organise_text(open_or_close):
     if open_or_close == 'open':
         print('-' * 60)
@@ -69,6 +83,7 @@ def intro():
     /__/  /__/
     ''')
     print(' ^ \n | \nYou')
+    enter()
     print('''Background:
     A new metal has been discovered in one of the deepest parts of the ocean.
     Scientists have named this metal Ellumium, with the chemical symbol El, and much of its
@@ -83,8 +98,8 @@ def intro():
     print('''()_________)
  \\ ~~~~~~~~ \\
   \\ ~~~~~~   \\
-    \\__________\\
-      ()__________))''')
+   \\__________\\
+    ()__________))''')
     enter()
     print(''''You get a copy of the newspaper in question and inspect it.
 There is a very sus chemistry quiz and you decide to take a look.''')
@@ -128,7 +143,7 @@ ZZZzz /,`.-'`'    -.  ;-;;,_
 
     wrong_town = f'You think got the name of the town, but something in your mind thinks otherwise.'
     corr_town = f'Thats it! The facility is in the town of Topi!'
-    hint_room1 = 'TAKE THE FIRST LETTER.'
+    hint_room1 = 'TAKE THE FIRST LETTERS.'
     town_question = '\nThe name of the town that the facility is in is (if you really dont know the answer type "hint"): '
     get_corr_ans(wrong_town, corr_town, '\n:) yay!', town_question, 'topi', hint=hint_room1)
 
@@ -165,7 +180,9 @@ it is locked. After all, your mission is to explore the facility,
 so you decide to delve deeper into the facility.
 
 The room looks to be a typical chemistry lab,
-except for pieces of a peculiar metal sitting primly on a table.''')
+except for pieces of a peculiar metal sitting primly on a table.
+You noticed that there is a ppe suit beside the door and decided to wear it before
+continuing into this mysterious room to further record down any new information.''')
 
     print('\nYou pick up the pieces distinctly pink coloured metal.')
     print('At one glance, you know this is the metal this facility is researching - Ellumium')
@@ -222,7 +239,7 @@ except for pieces of a peculiar metal sitting primly on a table.''')
                 insp3 = True
 
     print('\nSomething else catches your eye.')
-    print('Beside the door, paper with a series of questions\natop a number pad')
+    print('Beside the door, a paper with a series of questions\nsits atop a number pad')
     sleep(4)
     print('\nThe number pad accepts a 2-digit number\nand you realise that the password to the door must be related to the questions.')
     print('You try to answer the questions first\nusing knowledge gained from inspecting the items.')
@@ -240,9 +257,10 @@ your martial arts training kicks in and you win a 1 v 10 fight.
     get_corr_ans(insult, compliment, '', '\nQ1. Ellumium is a __________ metal.\n> ', 'transition')
     get_corr_ans(insult, compliment, '', '\nQ2. What process is used to separate group I metals from their salts?\n> ', 'electrolysis')
     get_corr_ans(insult, compliment, '', '\nQ3. Water is known to have a high surface tension. This is because of ________ _______.\n> ', 'hydrogen bonds', 'hydrogen bonding')
-    get_corr_ans(insult, compliment, '', '\nQ4. Which metal is Ellumium directly below in the reactivity series?\n> ', 'sodium')
+    get_corr_ans(insult, compliment, '', '\nQ4. Which metal is Ellumium directly below in, in the reactivity series?\n> ', 'sodium')
     get_corr_ans(dying, open_door, '', '\nYou type in the 2-digit password on the number pad. (type "hint" if you really don\'t know)\nThe psw is: ', '41', '43', hint=hint2)
     enter()
+
 def room3():
     print('''This room much the same as the previous one,
 except for a few stray pieces of wire and circuit boards scattered everywhere.
@@ -251,6 +269,9 @@ Beside the screen, there is a series of questions.
 
 You decide to answer the questions first.''')
     enter()
+
+    wrong = 'You have an answer, but it just seems wrong for some reason.'
+    right = ['Yes! You pump your fist in the air in celebration!', 'Yes! You jump so high that your head hits the celing with a thump, ouch!', 'Thats right!']
     Q3a_qn = 'Besides its uses in question 2, transition metals are usually used as catalysts\nGiven that Ellumium has 3 oxidation states, is iron a better catalyst than ellumium?'
     Q3b_qn = 'Choose a reasoning:\na. Iron has more oxidation states\nb. Ellumium is more reactive\nc. Oxidation states do not determine a catalyst’s potential\nd. Iron is a more abundant metal'
     Q4a_qn = '''Elumium is naturally found in an ore, Elumium(II) Oxide(El2O).
@@ -259,91 +280,124 @@ and given that the first equation is C + O2 —> CO₂,
 what is the enthalpy change of this reaction (+ / -)? '''
     Q4b_qn = 'Which state of matter is Ellumium produced?'
 
-    get_corr_ans('wrong', 'right', '', '\nQ1. Name one specific metal that is classified as a transition metal with 1 valence electron\nand is used to make bronze.\n> ', 'copper')
-    get_corr_ans('wrong', 'right', '', '\nQ2. Ellumium is mainly used to make _____\n> ', 'circuits', 'wires')
-    get_corr_ans('wrong', 'right', '', '\nQ3(a). ', Q3a_qn, '\n> ', 'no')
-    get_corr_ans('wrong', 'right', '', '\nQ3(b). ', Q3b_qn, '\n> ', 'c')
-    get_corr_ans('wrong', 'right', '', '\nQ4(a). ', Q4a_qn, '\n> ', '-')
-    get_corr_ans('wrong', 'right', '', '\nQ4(b). ', Q4b_qn, '\n> ', 'liquid')
+    get_corr_ans(wrong, right, '', '\nQ1. Name one specific metal that is classified as a transition metal with 1 valence electron\nand is used to make bronze.\n> ', 'copper')
+    get_corr_ans(wrong, right, '', '\nQ2. Ellumium is mainly used to make _____\n> ', 'circuits', 'wires')
+    get_corr_ans(wrong, right, '', '\nQ3(a). ' + Q3a_qn + '\n> ', 'no')
+    get_corr_ans(wrong, right, '', '\nQ3(b). ' + Q3b_qn + '\n> ', 'c')
+    get_corr_ans(wrong, right, '', '\nQ4(a). ' + Q4a_qn + '\n> ', '-')
+    get_corr_ans(wrong, right, '', '\nQ4(b). ' + Q4b_qn + '\n> ', 'liquid')
     enter()
 
     print('''After collating your answers to the questions, you seem to accidentally knock into a bookshelf
 containing the numerous research that the scientists of this research facility have already recorded.
-However, you noticed that after you slightly moved the bookshelf it suddenly made way and moved to the left
+However, you notice that after you slightly moved the bookshelf it suddenly made way and moved to the left
 thus revealing a door behind the bookshelf. After further inspection, you realise that the door was transparent
 and you can see the ellumium metal being processed. You noticed that there is a ppe suit beside the door and
 decided to wear it before entering this mysterious door to further record down any new information. The door
 quickly locks behind you. Under the keypad of the door, you notice a small piece of paper sticking out with these
 questions. Written on the back of the paper you see it says:
 
-    5th letter of First answer (E)
-    Take the number of letters in the second answer and use this formula. n*2+2=y. Find the yth letter of the alphabet  (L)
-    Take the answers of the 3rd question and get the number of total letters there are. Let this number be x. Use this formula. nx2=p. P will be a double digit number so inverse the number (for example 10 inversed is 01.) Let this new number be w and then find the Wth letter in the alphabet. (U)
-    Take the total number of letters in the both the answers of the 4th questions and let it be Q.
-    Then use the formula Q*2-2/2=v. Then find the Vth letter of the alphabet. (M)
+    1. 5th letter of First answer
+
+    2. Take the number of letters in the second answer and use this formula. n*2+2=y. Find the yth letter of the alphabet
+
+    3. Take the answers of the 3rd question and get the number of total letters there are. Let this number be x. Use this formula.
+    nx2=p. P will be a double digit number so inverse the number (for example 10 inversed is 01.) Let this new number be w and then find the Wth letter in the alphabet.
+
+    4. Take the total number of letters in the both the answers of the 4th questions and let it be Q.
+    Then use the formula Q*2-2/2=v. Then find the Vth letter of the alphabet.
 ''')
     enter()
     print('''You realise that this is the key to the password that the screen beside the door was asking for!
 You work to get the code and enter it.''')
-    get_corr_ans('wrong', 'right', '', '\nThe name of the lead scientist is: ', 'elum')
+    dying = '''You input the password...
+
+Alarms start blaring and a machine gun magically appeared from the celing.
+It aims at you with a red lazer and you know what you have to do.
+
+Your martial arts training kicks in again. You are like Neo from the matrix,
+dodging and weaving through the volley of bullets that start raining down at you.
+The machine gun gets confused, it has never met a worthy opponent before.
+It uses all its might to land a shot but it never got the chance to fire the first
+bullet.
+
+YOU SEND A FLYING KICK TOWARDS THE MACHINE GUN. A cracking sound can be heard and
+it retracts. You casually continue inputing the password.'''
+    correct = 'You hear the chiming of a bell, signaling that you got the correct password.'
+    get_corr_ans(dying, correct, '', '\nThe name of the lead scientist is: ', 'elum')
     print('The door opens with a hiss, leading to another room. But something\'s bothering you.')
-    print('Elum, hmm\nWhy does that name sound familiar?\nYou keep the name in the back of your mind as you progress.')
+    print('Elum, hmm...\nWhy does that name sound so familiar?\nYou keep the name in the back of your mind as you progress.')
     enter()
 
 def room4():
-    print('This room has a different odur and different layout altogether.')
+    print('\nThis next room has a different odur and different layout altogether.')
     print('There are heating elements and loose Ellumium metal scattered everywhere.')
-    print('There is a newspaper article stuck to the wall. It reads:')
+    print('\nThere is a newspaper article stuck to the wall. It reads:')
     print('''\tOne of the reasons why ellumium was a metal that the WHO has advised strongly against
     for its usage in any industrial or commercial use due to its toxic properties and the
     environmental issues it can cause. The WHO has not released a full report of the toxicity of the
-    metal and you will now have to do a deeper analysis of the metal’s toxic properties.''')
+    metal and scientists have to do a deeper analysis of the metal’s toxic properties.''')
     enter()
 
     organise_text('open')
     print('''You see another note on the desk. The note reads:
         LOG 2:
             I have broken some Ellumium metal to smaller pieces for it to be used to make wires.
-            However, it appears that Ellumium can suspend in the air as elumium particles.
-            Moreover, is extremely reactive and hence needs to be stored in a stable compound.''')
+            However, it appears that Ellumium can suspend in the air as Ellumium particles.
+            Moreover, is extremely reactive and hence needs to be stored as a stable compound.''')
     organise_text('close')
 
-    print('There is yet another keypad next to the door.')
+    print('\nThere is yet another keypad next to the door.')
     print('You are getting sick of seeing keypads.')
     print('This one is asking series of questions that you feel you can use the knowledge you have gained to solve.')
     enter()
 
     Q1 =  '''There are a few metals already recorded in our periodic table
-that are toxic or radioactive to humans which can cause mutations or metal poisoning. Name two.'''
+that are toxic or radioactive to humans which can cause mutations or metal poisoning. Name one.'''
     Q3 = '''Name one stable halide that Ellumium can form given that it needs
 to be broken down into its metal, given that Ellumium is made to have a charge of +3.
 (Give your answers in the chemical name)'''
-    Q4 = 'Explain how Ellumium can be stored in relatively high temperatures and remain in its solid state.'
+    Q4 = 'Explain how the Ellumium compound previously stated can be stored in relatively high temperatures and remain in its solid state.'
     Q5 = '''How can Ellumium be harmful to your body based on your prior chemistry knowledge?
     a. The ellumium can form an acid that lowers the pH of the stomach that can corrode your stomach
     b. The ellumium can explode in your body
     c. The elumium will displace sodium from sodium chloride in your body which\nwill therefore reduce the amount of sodium chloride in your body which inhibits growth
     d. The ellumium can form a alkali that increase the pH of the body that is not optimal for enzyme function'''
+    dying = '''An alarm starts blaring. You wait for something to start attacking you,
+        but nothing ever comes. You are confused but casually continue to answer the questions.'''
+    right = 'A robotic voice seems to be coming from everywhere in the room, "CORRECT!"'
 
 
-    get_corr_ans('wrong', 'right', '', '\nQ1. ', Q1, '\n> ', 'Arsenic', 'Cadmium', 'Lead', 'Mercury', 'Radium', 'Uranium')
-    get_corr_ans('wrong', 'right', '', '\nQ2. ', '\nQ2. Name another metal that is toxic in the same way that Ellumium is.', '\n> ', 'Lead')
-    get_corr_ans('wrong', 'right', '', '\nQ3. ', Q3, '\n> ', 'ellumium (iii) bromide', 'ellumium (iii) iodide', 'ellumium (iii) chloride')
-    get_corr_ans('wrong', 'right', '', '\nQ4. ', Q4, '\n> ', 'giant ionic structure', 'a lot of energy', 'high energy', 'break', 'strong electrostatic forces of attraction')
-    get_corr_ans('wrong', 'right', '', '\nQ5. ', Q5, '\n> ', 'd')
+    get_corr_ans(dying, right, '', '\nQ1. ' + Q1 + '\n> ', 'arsenic', 'cadmium', 'lead', 'mercury', 'radium', 'uranium')
+    get_corr_ans(dying, right, '', '\nQ2. Name another metal that is toxic in the same way that Ellumium is.\n> ', 'lead')
+    get_corr_ans(dying, right, '', '\nQ3. ' + Q3 + '\n> ', 'ellumium (iii) bromide', 'ellumium (iii) iodide', 'ellumium (iii) chloride', 'ellumium (iii) fluoride')
+    given_ans = ''
+    while not is_correct_keywords(given_ans, 'giant ionic structure', 'break', 'strong electrostatic forces of attraction', either_or=('a lot of energy', 'high energy', 'much energy')):
+        organise_text('open')
+        given_ans = input('\nQ4. ' + Q4 + '\n> ').lower().strip()
+        organise_text('close')
+        if not is_correct_keywords(given_ans, 'giant ionic structure', 'break', 'strong electrostatic forces of attraction', either_or=('a lot of energy', 'high energy', 'much energy')):
+            print(dying)
+        else:
+            print(right)
+    get_corr_ans(dying, right, '', '\nQ5. ' + Q5 + '\n> ', 'd')
+
     enter()
-    print('However, when you open the door, you see a guard staring right at your face.')
-    print('The last thing you remember something slamming into the side of your head before you black out.')
+    print('The door opens with a "ding" sound.')
+    print('However, as the door slides open, you see a very buff guard staring right at your face...')
+    print('It seems as if they found out that you were sneaking around in their facility.')
+    print('The last thing you remember something slamming hard into the side of your head before you black out.')
     enter()
+
 def room5():
     print('You wake up in a room that parallels a prison cell.')
-    print('''The door seems to be locked by a number keypad. You wait a couple of hours 
-till it is night time and until then you think of how you’re gonna escape but you feel hopeless. 
+    print('''The door seems to be locked by a number keypad. You wait a couple of hours
+till it is night time and until then you think of how you’re gonna escape but you feel hopeless.
 Suddenly a piece of paper gets slipped under your door. You quickly grab it and it has this written. Odd-43. Even-36. Count!. And the following questions.
-It is also written on the note, "I am undercover in this facility and I am here to help you escape. Meet me at the exit, 
+It is also written on the note, "I am undercover in this facility and I am here to help you escape. Meet me at the exit,
 you will have to make your way there yourself.''')
     enter()
-        
+
     Q1 = 'When elumium gets oxidised, the oxide can then react with both acids and bases. So, Elumiumi Oxide is _____'
     Q2 = 'Elumium can readily react with oxygen in the air to for a insoluble oxide layer.\nIn order to prevent this what is a method that can be used other than surface protection?'
     Q3 = 'Elumium and Graphite have a similar property of conducting electricity.\nWhat is the common thing that brings this common property?'
@@ -354,26 +408,26 @@ you will have to make your way there yourself.''')
     get_corr_ans('wrong', 'right', '', '\nQ3. ', Q3, '\n> ', 'delocalised electrons')
     get_corr_ans('wrong', 'right', '', '\nQ1. ', Q4, '\n> ', 'ellumium hydroxide')
     get_corr_ans('wrong', 'right', '', 'You enter the pin into the keypad: ', '151', hint='Check whether each answer is even or odd\nThen add the corresponding number')
-    
+
     print('''The door slides open with a whir and you hurry around the facility, trying to find the exit
 while not getting spotted by guards. You see the exit and run at full throttle!''')
     enter()
-    
-def end():
-    print('''You burst out the front door and scramble out. It is night time, 
-and the guards seem half asleep so you slowly sneak out of the facility. 
-Just at the exit, you see a guard standing tall and staring at you. 
 
-He says this, “Took you long enough. I slipped you that paper. WHO bought me over to their side when 
+def end():
+    print('''You burst out the front door and scramble out. It is night time,
+and the guards seem half asleep so you slowly sneak out of the facility.
+Just at the exit, you see a guard standing tall and staring at you.
+
+He says this, “Took you long enough. I slipped you that paper. WHO bought me over to their side when
 they had an inkling you were in danger."
 
 You reply, "We need to destroy this facility right now. This place is obviously evil
 and we cannot allow it to go on. How are we gonna destroy it?"
 
-He beamed, "I know just the right thing. Now, there is a small room in the far north of the 
-facility where a large clump of ellumium is. Right above is a large pipe of water. 
-You know what would happen if you were to break the pipe. It is very risky, but it's for the greater good. 
+He beamed, "I know just the right thing. Now, there is a small room in the far north of the
+facility where a large clump of ellumium is. Right above is a large pipe of water.
+You know what would happen if you were to break the pipe. It is very risky, but it's for the greater good.
 Or do you wish to save yourself and run away? The choice is yours to make. I trust you will make the right decision.''')
 
 
-room2()
+room4()
