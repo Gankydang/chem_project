@@ -56,7 +56,7 @@ def get_corr_ans(insults, compliments, catpic,  question, *corr_ans, hint=False)
 
 def intro():
     print('WELCOME TO OUR ESCAPE ROOM')
-    print('You are a scientist from the World Health Organisation (WHO)')
+    print('You are a scientist and investigaor from the World Health Organisation (WHO)')
     print('''       .-""-.
       /-.{}  \\
       | _\\__.|
@@ -90,9 +90,11 @@ def intro():
     properties is currently unknown. WHO has advised everyone to
     abstain from using this metal in production until further research despite its many ideal
     properties and can be found abundant in that area and therefore very affordable.
-    You are from the WHO. The WHO has been tipped off about a secret facility that is using this
-    metal for nefarious purposes. You are tasked with heading to the facility and discovering for
-    yourself what exactly they are doing. You are told that collaborators of the facility are using
+    The WHO has been tipped off about a secret facility that is using this
+    metal for nefarious purposes.
+
+    You, as the lead investigator and one of the best scientists in the WHO, are tasked with heading
+    to the facility and discovering for yourself what exactly they are doing. You are told that collaborators of the facility are using
     a newspaper to transmit information, and in this case, the name of the town that the facility is located in.
 ''')
     print('''()_________)
@@ -361,7 +363,7 @@ to be broken down into its metal, given that Ellumium is made to have a charge o
     Q5 = '''How can Ellumium be harmful to your body based on your prior chemistry knowledge?
     a. The ellumium can form an acid that lowers the pH of the stomach that can corrode your stomach
     b. The ellumium can explode in your body
-    c. The elumium will displace sodium from sodium chloride in your body which\nwill therefore reduce the amount of sodium chloride in your body which inhibits growth
+    c. The elumium will displace sodium from sodium chloride in your body which\n\twill therefore reduce the amount of sodium chloride in your body which inhibits growth
     d. The ellumium can form a alkali that increase the pH of the body that is not optimal for enzyme function'''
     dying = '''An alarm starts blaring. You wait for something to start attacking you,
         but nothing ever comes. You are confused but casually continue to answer the questions.'''
@@ -385,49 +387,230 @@ to be broken down into its metal, given that Ellumium is made to have a charge o
     enter()
     print('The door opens with a "ding" sound.')
     print('However, as the door slides open, you see a very buff guard staring right at your face...')
+    print('''                 ,#####,
+                 #_   _#
+                 |a` `a|
+                 |  u  |
+                 \\  =  /
+                 |\\___/|
+        ___ ____/:     :\\____ ___
+      .'   `.-===-\\   /-===-.`   '.
+     /      .-"""""-.-"""""-.      \\
+    /'             =:=             '\\
+  .'  ' .:    o   -=:=-   o    :. '  `.
+  (.'   /'. '-.....-'-.....-' .'\\   '.)
+  /' ._/   ".     --:--     ."   \\_. '\\
+ |  .'|      ".  ---:---  ."      |'.  |
+ |  : |       |  ---:---  |       | :  |
+  \\ : |       |_____._____|       | : /
+  /   (       |----|------|       )   \\
+ /... .|      |    |      |      |. ...\\
+|::::/''     /     |       \\     ''\\::::|
+'""""       /'    .L_      `\\       """"'
+           /'-.,__/` `\__..-'\\
+          ;      /     \      ;
+          :     /       \     |
+          |    /         \.   |
+          |`../           |  ,/
+          ( _ )           |  _)
+          |   |           |   |
+          |___|           \\___|
+          :===|            |==|
+           \\  /            |__|
+           /\/\           /"""`8.__
+           |oo|           \\__.//___)
+           |==|
+           \\__/)''')
     print('It seems as if they found out that you were sneaking around in their facility.')
     print('The last thing you remember something slamming hard into the side of your head before you black out.')
     enter()
 
 def room5():
     print('You wake up in a room that parallels a prison cell.')
-    print('''The door seems to be locked by a number keypad. You wait a couple of hours
-till it is night time and until then you think of how you’re gonna escape but you feel hopeless.
-Suddenly a piece of paper gets slipped under your door. You quickly grab it and it has this written. Odd-43. Even-36. Count!. And the following questions.
-It is also written on the note, "I am undercover in this facility and I am here to help you escape. Meet me at the exit,
-you will have to make your way there yourself.''')
+    print('''The door seems to be locked by a number keypad. You are seriously questioning your sanity after seeing so many keypads.
+You slide to the algae covererd floor, utterly defeated. After waiting a couple of hours,
+you see the sun making its descent through the bars of your cell, casting a magnificent red glow across the sky.
+You try to remember who Elum was again but to no avail.
+
+Before long, night befell and everything is silent and dark. You think of how you’re gonna escape but after
+exhausting all options, hope of an escape now seems like an untouchable dream.
+
+Not only do you have to escape, but you have to warn the WHO about this place.
+It seems like they are using toxic Ellumium metal as a cheap
+substitute for copper to make wires. Moreover, in the fleeting moments that you regained consciousness
+while they were dragging you to your cell, you caught glimpses of weapons with the distinct pink
+metal incorporated into it.
+
+What will happen if they continue doing this?
+Am I stuck here for the rest of my life?
+Will my family know that I am still here?
+
+The sound of crackling paper rouses you out of your melancholic reverie. You get up and head towards the sound.
+You feel the ground in pitch dark until your fingers touch a piece of paper. It seems that someone has slipped it
+into your cell. You quickly grab it and use the moonlight to read untidy words scrawled there.
+It reads, "I am undercover in this facility and I am here to help you escape. Meet me at the exit,
+you will have to make your way there by yourself..."
+
+"The following information will help you to escape this room."
+
+Odd - 43. Even - 36. Count!. And the following questions.''')
     enter()
 
-    Q1 = 'When elumium gets oxidised, the oxide can then react with both acids and bases. So, Elumiumi Oxide is _____'
+    Q1 = 'When elumium gets oxidised, the oxide can then react with both acids and bases. So, Elumium Oxide is _____'
     Q2 = 'Elumium can readily react with oxygen in the air to for a insoluble oxide layer.\nIn order to prevent this what is a method that can be used other than surface protection?'
     Q3 = 'Elumium and Graphite have a similar property of conducting electricity.\nWhat is the common thing that brings this common property?'
     Q4 = 'Elumium reacts with cold water to form _____ and water.'
+    wrong = '''A giant red 'X' appears across the screen, accompanying a sound of disapproval. You hear something moving behind you...
+You whirl around to be greeted by the toilet, which was previously situated at the other corner of the room,
+which had sprouted arms and legs. It makes a flushing sound and starts vomitting toilet water at you.
 
-    get_corr_ans('wrong', 'right', '', '\nQ1. ', Q1, '\n> ', 'amphoteric')
-    get_corr_ans('wrong', 'right', '', '\nQ2. ', Q2, '\n> ', 'galvanising', 'sacrificial protection')
-    get_corr_ans('wrong', 'right', '', '\nQ3. ', Q3, '\n> ', 'delocalised electrons')
-    get_corr_ans('wrong', 'right', '', '\nQ1. ', Q4, '\n> ', 'ellumium hydroxide')
-    get_corr_ans('wrong', 'right', '', 'You enter the pin into the keypad: ', '151', hint='Check whether each answer is even or odd\nThen add the corresponding number')
+You try to dodge it but still get a facefull of disgusting toilet water. The toilet returns back to its
+original resting spot and its arms and legs retract. Disgusted, this makes you want to escape this place
+even more. You try again.'''
+    right = '''The door clicks but seems to be jammed. You pry it open with all your might,
+biceps bulging.'''
+    incorrect = '''Ths isn't the time to be fooling around. You try again.'''
+    correct = 'You are one step closer to escaping this wretched place!'
 
-    print('''The door slides open with a whir and you hurry around the facility, trying to find the exit
-while not getting spotted by guards. You see the exit and run at full throttle!''')
+    get_corr_ans(incorrect, correct, '', '\nQ1. ' + Q1 + '\n> ', 'amphoteric')
+    get_corr_ans(incorrect, correct, '', '\nQ2. ' + Q2 + '\n> ', 'galvanising', 'sacrificial protection')
+    get_corr_ans(incorrect, correct, '', '\nQ3. ' + Q3 + '\n> ', 'delocalised electrons')
+    get_corr_ans(incorrect, correct, '', '\nQ4. ' + Q4 + '\n> ', 'ellumium (iii) hydroxide')
+    get_corr_ans(wrong, right, '', 'You enter the pin into the keypad: (if you really don\'t know enter "hint")', '151', hint='Check whether each answer is even or odd\nThen add the corresponding number')
+
+    print('''Finally, the door slides open and you hurry around the facility, trying to find the exit
+while not getting spotted by guards. After some time, you suddenly spot the exit and run at full throttle towards it!''')
     enter()
 
 def end():
-    print('''You burst out the front door and scramble out. It is night time,
-and the guards seem half asleep so you slowly sneak out of the facility.
-Just at the exit, you see a guard standing tall and staring at you.
-
-He says this, “Took you long enough. I slipped you that paper. WHO bought me over to their side when
-they had an inkling you were in danger."
+    print('''You burst out the front door and into the night.
+The guards seem half asleep so you slowly sneak past them. Then, someone
+touches your shoulder. You jump, startled, and turn to face the foe.
+A guard is standing tall and staring at you. You prepare to throw him an uppercut when
+he says, “Took you long enough. I slipped you that paper. WHO notified when
+they had an inkling that you were in danger."''')
+    enter()
+    print('''You are surprised that WHO actually had a "man on the inside" for this facility
 
 You reply, "We need to destroy this facility right now. This place is obviously evil
-and we cannot allow it to go on. How are we gonna destroy it?"
+and we cannot allow it to go on. It is planning to weaponise Ellumium and
+use it for wires despite its toxic properites! How are we gonna put a stop to this?
+If we don't destroy the facility now, by the time WHO takes action, it may already be too late."
 
-He beamed, "I know just the right thing. Now, there is a small room in the far north of the
-facility where a large clump of ellumium is. Right above is a large pipe of water.
+He beamed, "I fully agree with you, I also saw some deadly looking weapons while
+walking around the facility. Now, there is a small room in the far north of the
+facility where a large clump of Ellumium is. Right above is a large water pipe.
 You know what would happen if you were to break the pipe. It is very risky, but it's for the greater good.
-Or do you wish to save yourself and run away? The choice is yours to make. I trust you will make the right decision.''')
+The place could very well explode and kill everyone inside.
+
+The decision is yours, after all, you are our lead investigator. I trust that you will make the best decision.
+Do you wish to make your escape or to take the risk and save millions of lives? I trust you will make the right choice."''')
+    enter()
+    question = '''What would you like to do?
+    a. make your cowardly escape and possibly be indirectly responsible for millions of deaths
+    b. destroy the facility and risk dying for the greater good\n> '''
+    if_a = '''You decide to be a coward, "I think we should escape. The WHO can take care of this
+on their own."'''
+    if_b = '''After fully assessing the situation, you decide to take the risk. You are the lead
+investigator, one of the best scientists. The WHO hired you for a reason - to always do what is right,
+to put others lives before your own. So what if you don't make it out?
+
+You say, "I have made my choice. I'll go in and destroy this place. If I don't make it out in 10
+minutes, leave without me."'''
+    given_ans = ''
 
 
+    while not is_correct(given_ans, ['a', 'b']):
+        given_ans = input(question).lower().strip()
+
+        if given_ans == 'a':
+            print(if_a)
+            print('''The guard is slightly disappointed in you but he runs away with you.
+A helicopter from the WHO lands and you jump right in.
+Although the guard seems only slightly disappointed with your choice,
+the pilot is extremely disappointed.
+
+He decides to take matters into his own hands and crashes the chopper
+into the facility. As the chopper is careening into the building, you
+are petrified. The last thought you have is a quote that you remember
+from your chemistry teacher, Mr Lum, all those years back.
+
+Wait...
+
+Mr Lum, Mr Elum...
+No way...
+He wouldn't do such things...
+
+The whole place explodes in a flurry of flames and had no survivors.''')
+            enter()
+            print('''Years later, children learn in their textbooks of
+the story of this facility. They learn of the scientist, lead investigator,
+and how he was a coward. Everyone revolts at the sound of your name.
+You are now infamous, are you happy?
+
+THE END ''')
+
+        if given_ans == 'b':
+            print(if_b)
+            print('''The guard gives an affirmative nod, "You will make it back."
+You rush into the facility and locate the small room. There is a very handy gun hanging inside, you pick it up.
+As the guard said, there was a large pipe right above a massive container of Elumium metal pieces.
+''')
+            ans = ''
+            while not is_correct(ans, ['yes', 'no']):
+                ans = input('Are you sure you want to break the pipe? ').lower().strip()
+                if ans == 'no':
+                    print('''At the last moment, you decide to chicken out. You try
+to sneak out again. However, the guards suddenly hear you trying to sneak out and
+they put a bullet through your face (and every hole in your body).
+As the bullet bores a hole into your brain, you don't know why, but
+you think of your chemistry teacher, Mr Lum.
+
+Hold up...
+That was the name of the scientist!
+But why...
+
+The bullet fully passes through your skull and you fall to the ground.''')
+                    enter()
+                    print('''Years later, children learn in their textbooks of
+the mass genocide a few years ago. They learn of the scientist, lead investigator,
+and how he was a coward. How he could have prevented this with the sacrifice of one life,
+his life. Of how he could have prevented the killing of millions of people.
+
+You are remembered as the coward who ran away.
+You are held responsible for all those deaths.
+Are you happy?
+
+THE END''')
+                if ans == 'yes':
+                    print('''You break the pipe and run as fast as you can to the exit.
+Then you remember you run like a kaushik. The room and corridor becomes engulfed in flames.
+The heat of the fire gently kisses your face and then it suddenly slaps you in your face.
+The flames lick your face as you struggle to breathe.
+Your legs start to melt and then your eyes also liquify.
+
+You think to yourself, “Welp at least I'm dying in glory and saving the world from this facility.
+As my chemistry teacher taught me once, sacrifice for the greater good. My chemistry teacher...
+WAIT! HE WAS THE LEAD SCIENTIST OF THIS PLACE?
+BUT..."
+
+The flames fully engulf you like a blanket, you are glad that it had to be you,
+to sacrifice yourself. There is a smile on your face as your vision slowly fades away...''')
+                    enter()
+                    print('''Years later, children learn in their textbooks of
+the scientist, lead investigator, from WHO. And how he single handedly saved the lives
+of millions of people. He prevented the facility from producing the weapons and toxic wires.
+
+He is remembered as a hero.
+He is remembered as someone who made the right decision when the time came...
+
+THE END :)''')
+
+
+intro()
+room1()
+room2()
+room3()
 room4()
+room5()
+end()
