@@ -86,7 +86,7 @@ def intro():
     enter()
     print('''Background:
     A new metal has been discovered in one of the deepest parts of the ocean.
-    Scientists have named this metal Ellumium, with the chemical symbol El, and much of its
+    Scientists have named this metal Elumium, with the chemical symbol El, and much of its
     properties is currently unknown. WHO has advised everyone to
     abstain from using this metal in production until further research despite its many ideal
     properties and can be found abundant in that area and therefore very affordable.
@@ -187,7 +187,7 @@ You noticed that there is a ppe suit beside the door and decided to wear it befo
 continuing into this mysterious room to further record down any new information.''')
 
     print('\nYou pick up the pieces distinctly pink coloured metal.')
-    print('At one glance, you know this is the metal this facility is researching - Ellumium')
+    print('At one glance, you know this is the metal this facility is researching - Elumium')
     enter()
     while not all((insp1, insp2, insp3)):
         inspect = None
@@ -203,7 +203,7 @@ continuing into this mysterious room to further record down any new information.
                 organise_text('open')
                 print('''\nYou pick up the note, it reads:
         LOG 1:
-            A solution of Ellumium ions is pink.
+            A solution of Elumium ions is pink.
             Ellumium metal has a high melting point.''')
                 organise_text('close')
                 enter()
@@ -216,7 +216,7 @@ continuing into this mysterious room to further record down any new information.
                 sleep(2)
                 print('\nYou are sent sprawling to the ground, but...')
                 sleep(2)
-                print('\nAs you are falling, you lose grip of the pieces of Ellumium in you hand.')
+                print('\nAs you are falling, you lose grip of the pieces of Elumium in you hand.')
                 sleep(3)
                 print('\nMuch to your consternation, one piece of it plops directly\ninto the solution of calcium nitrate!')
                 sleep(3)
@@ -256,10 +256,10 @@ your martial arts training kicks in and you win a 1 v 10 fight.
     open_door = '\nThe door slides upward with a hiss. You advance to the next room!'
     hint2 = 'Count the number of letters.'
 
-    get_corr_ans(insult, compliment, '', '\nQ1. Ellumium is a __________ metal.\n> ', 'transition')
+    get_corr_ans(insult, compliment, '', '\nQ1. Elumium is a __________ metal.\n> ', 'transition')
     get_corr_ans(insult, compliment, '', '\nQ2. What process is used to separate group I metals from their salts?\n> ', 'electrolysis')
     get_corr_ans(insult, compliment, '', '\nQ3. Water is known to have a high surface tension. This is because of ________ _______.\n> ', 'hydrogen bonds', 'hydrogen bonding')
-    get_corr_ans(insult, compliment, '', '\nQ4. Which metal is Ellumium directly below in, in the reactivity series?\n> ', 'sodium')
+    get_corr_ans(insult, compliment, '', '\nQ4. Which metal is Elumium directly below in, in the reactivity series?\n> ', 'sodium')
     get_corr_ans(dying, open_door, '', '\nYou type in the 2-digit password on the number pad. (type "hint" if you really don\'t know)\nThe psw is: ', '41', '43', hint=hint2)
     enter()
 
@@ -274,19 +274,19 @@ You decide to answer the questions first.''')
 
     wrong = 'You have an answer, but it just seems wrong for some reason.'
     right = ['Yes! You pump your fist in the air in celebration!', 'Yes! You jump so high that your head hits the celing with a thump, ouch!', 'Thats right!']
-    Q3a_qn = 'Besides its uses in question 2, transition metals are usually used as catalysts\nGiven that Ellumium has 3 oxidation states, is iron a better catalyst than ellumium?'
-    Q3b_qn = 'Choose a reasoning:\na. Iron has more oxidation states\nb. Ellumium is more reactive\nc. Oxidation states do not determine a catalyst’s potential\nd. Iron is a more abundant metal'
-    Q4a_qn = '''Elumium is naturally found in an ore, Elumium(II) Oxide(El2O).
+    Q3a_qn = 'Besides its uses in question 2, transition metals are usually used as catalysts\nGiven that Elumium has 3 oxidation states, is iron a better catalyst than ellumium?'
+    Q3b_qn = 'Choose a reasoning:\na. Iron has more oxidation states\nb. Elumium is more reactive\nc. Oxidation states do not determine a catalyst’s potential\nd. Iron is a more abundant metal'
+    Q4a_qn = '''Elumium is naturally found in an ore, Elumium(III) Oxide.
 Given that the extraction of Elumium is similar to that of the extraction of iron from haematite,
 and given that the first equation is C + O2 —> CO₂,
-what is the enthalpy change of this reaction (+ / -)? '''
-    Q4b_qn = 'Which state of matter is Ellumium produced?'
+what is the enthalpy change of this reaction (positive / negative)? '''
+    Q4b_qn = 'Which state of matter is Elumium produced?'
 
     get_corr_ans(wrong, right, '', '\nQ1. Name one specific metal that is classified as a transition metal with 1 valence electron\nand is used to make bronze.\n> ', 'copper')
-    get_corr_ans(wrong, right, '', '\nQ2. Ellumium is mainly used to make _____\n> ', 'circuits', 'wires')
+    get_corr_ans(wrong, right, '', '\nQ2. Elumium is mainly used to make _____\n> ', 'circuits', 'wires')
     get_corr_ans(wrong, right, '', '\nQ3(a). ' + Q3a_qn + '\n> ', 'no')
     get_corr_ans(wrong, right, '', '\nQ3(b). ' + Q3b_qn + '\n> ', 'c')
-    get_corr_ans(wrong, right, '', '\nQ4(a). ' + Q4a_qn + '\n> ', '-')
+    get_corr_ans(wrong, right, '', '\nQ4(a). ' + Q4a_qn + '\n> ', 'negative')
     get_corr_ans(wrong, right, '', '\nQ4(b). ' + Q4b_qn + '\n> ', 'liquid')
     enter()
 
@@ -294,7 +294,7 @@ what is the enthalpy change of this reaction (+ / -)? '''
 containing the numerous research that the scientists of this research facility have already recorded.
 However, you notice that after you slightly moved the bookshelf it suddenly made way and moved to the left
 thus revealing a door behind the bookshelf. After further inspection, you realise that the door was transparent
-and you can see the ellumium metal being processed. You noticed that there is a ppe suit beside the door and
+and you can see the Elumium metal being processed. You noticed that there is a ppe suit beside the door and
 decided to wear it before entering this mysterious door to further record down any new information. The door
 quickly locks behind you. Under the keypad of the door, you notice a small piece of paper sticking out with these
 questions. Written on the back of the paper you see it says:
@@ -304,7 +304,7 @@ questions. Written on the back of the paper you see it says:
     2. Take the number of letters in the second answer and use this formula. n*2+2=y. Find the yth letter of the alphabet
 
     3. Take the answers of the 3rd question and get the number of total letters there are. Let this number be x. Use this formula.
-    nx2=p. P will be a double digit number so inverse the number (for example 10 inversed is 01.) Let this new number be w and then find the Wth letter in the alphabet.
+    nx2=p. P will be a double digit number so reverse the number (for example 10 reversed is 01.) Let this new number be w and then find the Wth letter in the alphabet.
 
     4. Take the total number of letters in the both the answers of the 4th questions and let it be Q.
     Then use the formula Q*2-2/2=v. Then find the Vth letter of the alphabet.
@@ -333,9 +333,9 @@ it retracts. You casually continue inputing the password.'''
 
 def room4():
     print('\nThis next room has a different odur and different layout altogether.')
-    print('There are heating elements and loose Ellumium metal scattered everywhere.')
+    print('There are heating elements and loose Elumium metal scattered everywhere.')
     print('\nThere is a newspaper article stuck to the wall. It reads:')
-    print('''\tOne of the reasons why ellumium was a metal that the WHO has advised strongly against
+    print('''\tOne of the reasons why Elumium was a metal that the WHO has advised strongly against
     for its usage in any industrial or commercial use due to its toxic properties and the
     environmental issues it can cause. The WHO has not released a full report of the toxicity of the
     metal and scientists have to do a deeper analysis of the metal’s toxic properties.''')
@@ -344,8 +344,8 @@ def room4():
     organise_text('open')
     print('''You see another note on the desk. The note reads:
         LOG 2:
-            I have broken some Ellumium metal to smaller pieces for it to be used to make wires.
-            However, it appears that Ellumium can suspend in the air as Ellumium particles.
+            I have broken some Elumium metal to smaller pieces for it to be used to make wires.
+            However, it appears that Ellumium can suspend in the air as Elumium particles.
             Moreover, is extremely reactive and hence needs to be stored as a stable compound.''')
     organise_text('close')
 
@@ -356,23 +356,23 @@ def room4():
 
     Q1 =  '''There are a few metals already recorded in our periodic table
 that are toxic or radioactive to humans which can cause mutations or metal poisoning. Name one.'''
-    Q3 = '''Name one stable halide that Ellumium can form given that it needs
-to be broken down into its metal, given that Ellumium is made to have a charge of +3.
+    Q3 = '''Name one stable halide that Elumium can form given that it needs
+to be broken down into its metal, given that Elumium is made to have a charge of +3.
 (Give your answers in the chemical name)'''
-    Q4 = 'Explain how the Ellumium compound previously stated can be stored in relatively high temperatures and remain in its solid state.'
-    Q5 = '''How can Ellumium be harmful to your body based on your prior chemistry knowledge?
-    a. The ellumium can form an acid that lowers the pH of the stomach that can corrode your stomach
-    b. The ellumium can explode in your body
-    c. The elumium will displace sodium from sodium chloride in your body which\n\twill therefore reduce the amount of sodium chloride in your body which inhibits growth
-    d. The ellumium can form a alkali that increase the pH of the body that is not optimal for enzyme function'''
+    Q4 = 'Explain how the Elumium compound previously stated can be stored in relatively high temperatures and remain in its solid state.'
+    Q5 = '''How can Elumium be harmful to your body based on your prior chemistry knowledge?
+    a. The Elumium can form an acid that lowers the pH of the stomach that can corrode your stomach
+    b. The Elumium can explode in your body
+    c. The Elumium will displace sodium from sodium chloride in your body which\n\twill therefore reduce the amount of sodium chloride in your body which inhibits growth
+    d. The Ellumium can form a alkali that increase the pH of the body that is not optimal for enzyme function'''
     dying = '''An alarm starts blaring. You wait for something to start attacking you,
         but nothing ever comes. You are confused but casually continue to answer the questions.'''
     right = 'A robotic voice seems to be coming from everywhere in the room, "CORRECT!"'
 
 
-    get_corr_ans(dying, right, '', '\nQ1. ' + Q1 + '\n> ', 'arsenic', 'cadmium', 'lead', 'mercury', 'radium', 'uranium')
-    get_corr_ans(dying, right, '', '\nQ2. Name another metal that is toxic in the same way that Ellumium is.\n> ', 'lead')
-    get_corr_ans(dying, right, '', '\nQ3. ' + Q3 + '\n> ', 'ellumium (iii) bromide', 'ellumium (iii) iodide', 'ellumium (iii) chloride', 'ellumium (iii) fluoride')
+    get_corr_ans(dying, right, '', '\nQ1. ' + Q1 + '\n> ', 'arsenic', 'cadmium', 'lead', 'mercury', 'radium', 'uranium', 'francium', 'bismuth')
+    get_corr_ans(dying, right, '', '\nQ2. Name another metal that is toxic in the same way that Elumium is.\n> ', 'lead')
+    get_corr_ans(dying, right, '', '\nQ3. ' + Q3 + '\n> ', 'elumium (iii) bromide', 'elumium (iii) iodide', 'elumium (iii) chloride', 'elumium (iii) fluoride')
     given_ans = ''
     while not is_correct_keywords(given_ans, 'giant ionic structure', 'break', 'strong electrostatic forces of attraction', either_or=('a lot of energy', 'high energy', 'much energy')):
         organise_text('open')
@@ -436,7 +436,7 @@ Before long, night befell and everything is silent and dark. You think of how yo
 exhausting all options, hope of an escape now seems like an untouchable dream.
 
 Not only do you have to escape, but you have to warn the WHO about this place.
-It seems like they are using toxic Ellumium metal as a cheap
+It seems like they are using toxic Elumium metal as a cheap
 substitute for copper to make wires. Moreover, in the fleeting moments that you regained consciousness
 while they were dragging you to your cell, you caught glimpses of weapons with the distinct pink
 metal incorporated into it.
@@ -456,7 +456,7 @@ you will have to make your way there by yourself..."
 Odd - 43. Even - 36. Count!. And the following questions.''')
     enter()
 
-    Q1 = 'When elumium gets oxidised, the oxide can then react with both acids and bases. So, Elumium Oxide is _____'
+    Q1 = 'When Elumium gets oxidised, the oxide can then react with both acids and bases. So, Elumium Oxide is _____'
     Q2 = 'Elumium can readily react with oxygen in the air to for a insoluble oxide layer.\nIn order to prevent this what is a method that can be used other than surface protection?'
     Q3 = 'Elumium and Graphite have a similar property of conducting electricity.\nWhat is the common thing that brings this common property?'
     Q4 = 'Elumium reacts with cold water to form _____ and water.'
@@ -475,7 +475,7 @@ biceps bulging.'''
     get_corr_ans(incorrect, correct, '', '\nQ1. ' + Q1 + '\n> ', 'amphoteric')
     get_corr_ans(incorrect, correct, '', '\nQ2. ' + Q2 + '\n> ', 'galvanising', 'sacrificial protection')
     get_corr_ans(incorrect, correct, '', '\nQ3. ' + Q3 + '\n> ', 'delocalised electrons')
-    get_corr_ans(incorrect, correct, '', '\nQ4. ' + Q4 + '\n> ', 'ellumium (iii) hydroxide')
+    get_corr_ans(incorrect, correct, '', '\nQ4. ' + Q4 + '\n> ', 'elumium (iii) hydroxide')
     get_corr_ans(wrong, right, '', 'You enter the pin into the keypad: (if you really don\'t know enter "hint")', '151', hint='Check whether each answer is even or odd\nThen add the corresponding number')
 
     print('''Finally, the door slides open and you hurry around the facility, trying to find the exit
@@ -499,7 +499,7 @@ If we don't destroy the facility now, by the time WHO takes action, it may alrea
 
 He beamed, "I fully agree with you, I also saw some deadly looking weapons while
 walking around the facility. Now, there is a small room in the far north of the
-facility where a large clump of Ellumium is. Right above is a large water pipe.
+facility where a large clump of Elumium is. Right above is a large water pipe.
 You know what would happen if you were to break the pipe. It is very risky, but it's for the greater good.
 The place could very well explode and kill everyone inside.
 
