@@ -8,7 +8,7 @@ def is_correct(given_ans, correct_ans):
         return True
     return False
 
-def is_correct_keywords(given_ans, *correct_ans, either_or=False):
+def is_correct_keywords(given_ans, *correct_ans, either_or=False, more_stuff=False):
     if given_ans == '':
         return False
     new_correct_ans = list(correct_ans)
@@ -18,7 +18,9 @@ def is_correct_keywords(given_ans, *correct_ans, either_or=False):
     if len(new_correct_ans) == 0:
         for thing in either_or:
             if thing in given_ans:
-                return True
+                for more_things in more_stuff:
+                    if more_things in given_ans:
+                        return True
     else:
         return False
 
@@ -32,6 +34,7 @@ def organise_text(open_or_close):
 
 def enter():
     input('---Press enter to continue---')
+    print()
 
 def get_corr_ans(insults, compliments, catpic,  question, *corr_ans, hint=False):
     given_ans = ''
@@ -103,7 +106,7 @@ def intro():
    \\__________\\
     ()__________))''')
     enter()
-    print(''''You get a copy of the newspaper in question and inspect it.
+    print('''You get a copy of the newspaper in question and inspect it.
 There is a very sus chemistry quiz and you decide to take a look.''')
 
 def room1():
@@ -204,7 +207,7 @@ continuing into this mysterious room to further record down any new information.
                 print('''\nYou pick up the note, it reads:
         LOG 1:
             A solution of Elumium ions is pink.
-            Ellumium metal has a high melting point.''')
+            Elumium metal has a high melting point.''')
                 organise_text('close')
                 enter()
                 insp1 = True
@@ -326,7 +329,7 @@ bullet.
 YOU SEND A FLYING KICK TOWARDS THE MACHINE GUN. A cracking sound can be heard and
 it retracts. You casually continue inputing the password.'''
     correct = 'You hear the chiming of a bell, signaling that you got the correct password.'
-    get_corr_ans(dying, correct, '', '\nThe name of the lead scientist is: ', 'elum')
+    get_corr_ans(dying, correct, '', '\nThe name of the lead scientist is (one word): ', 'elum')
     print('The door opens with a hiss, leading to another room. But something\'s bothering you.')
     print('Elum, hmm...\nWhy does that name sound so familiar?\nYou keep the name in the back of your mind as you progress.')
     enter()
@@ -366,7 +369,7 @@ to be broken down into its metal, given that Elumium is made to have a charge of
     c. The Elumium will displace sodium from sodium chloride in your body which\n\twill therefore reduce the amount of sodium chloride in your body which inhibits growth
     d. The Ellumium can form a alkali that increase the pH of the body that is not optimal for enzyme function'''
     dying = '''An alarm starts blaring. You wait for something to start attacking you,
-        but nothing ever comes. You are confused but casually continue to answer the questions.'''
+    but nothing ever comes. You are confused but casually continue to answer the questions.'''
     right = 'A robotic voice seems to be coming from everywhere in the room, "CORRECT!"'
 
 
@@ -374,11 +377,11 @@ to be broken down into its metal, given that Elumium is made to have a charge of
     get_corr_ans(dying, right, '', '\nQ2. Name another metal that is toxic in the same way that Elumium is.\n> ', 'lead')
     get_corr_ans(dying, right, '', '\nQ3. ' + Q3 + '\n> ', 'elumium (iii) bromide', 'elumium (iii) iodide', 'elumium (iii) chloride', 'elumium (iii) fluoride')
     given_ans = ''
-    while not is_correct_keywords(given_ans, 'giant ionic structure', 'break', 'strong electrostatic forces of attraction', either_or=('a lot of energy', 'high energy', 'much energy')):
+    while not is_correct_keywords(given_ans, 'giant ionic structure', 'strong electrostatic forces of attraction', either_or=('a lot of energy', 'high energy', 'much energy'), more_stuff=('break', 'overcome')):
         organise_text('open')
         given_ans = input('\nQ4. ' + Q4 + '\n> ').lower().strip()
         organise_text('close')
-        if not is_correct_keywords(given_ans, 'giant ionic structure', 'break', 'strong electrostatic forces of attraction', either_or=('a lot of energy', 'high energy', 'much energy')):
+        if not is_correct_keywords(given_ans, 'giant ionic structure', 'strong electrostatic forces of attraction', either_or=('a lot of energy', 'high energy', 'much energy'), more_stuff=('break', 'overcome')):
             print(dying)
         else:
             print(right)
